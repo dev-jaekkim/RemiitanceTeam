@@ -26,18 +26,18 @@ public class AlternatingCharacters {
         int sizeOfString = s.length();
         int deletionCount = 0;
 
-        if(sizeOfString > 0 ) {
-            char lastLetter = s.charAt(sizeOfString);
-
-            for (int i = sizeOfString - 1; i > 1; i--) {
-                if (lastLetter == s.charAt(i - 1)) {
+        if (sizeOfString > 1) {
+            char lastLetter = s.charAt(sizeOfString - 1);
+            for (int i = sizeOfString; i > 1; i--) {
+                if (lastLetter == s.charAt(i - 2)) {
                     deletionCount++;
-                    lastLetter = s.charAt(i - 1);
                 }
+                lastLetter = s.charAt(i - 2);
+
             }
         }
 
-
         return deletionCount;
     }
+
 }
