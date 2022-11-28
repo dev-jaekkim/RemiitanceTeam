@@ -34,9 +34,22 @@ public class PrintTheElementsOfALinkedList {
         }
     }
 
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    public void printTheElementsOfALinkedList (SinglyLinkedListNode head) {
 
-    public int printTheElementsOfALinkedList (SinglyLinkedListNode head) {
-        return 0;
+        System.out.println(head.data);
+        while (head.next != null) {
+            head = head.next;
+            System.out.println(head.data);
+        }
     }
 
 }
